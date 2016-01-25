@@ -23,7 +23,7 @@ OptionParser.new do |opts|
   end
 
   opts.on(
-    '-s', '--style [STYLE]', [:github, :atom], 'Choose style (atom, github)'
+    '-s', '--style [STYLE]', [:github, :atom, :githubformarkedapp], 'Choose style (atom, github, githubformarkedapp)'
   ) do |s|
     options[:style] = s
   end

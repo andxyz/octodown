@@ -22,7 +22,7 @@ module Octodown
       end
 
       def title
-        'Octodown For Marked App Preview'
+        'Octodown For Marked 2.App Preview'
       end
 
       def stylesheet
