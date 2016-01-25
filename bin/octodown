@@ -36,6 +36,10 @@ OptionParser.new do |opts|
     options[:presenter] = :raw
   end
 
+  opts.on '--raw-for-markedapp', 'Print raw HTML simplified without websocket or weburls to STDOUT' do
+    options[:presenter] = :raw_for_markedapp
+  end
+
   opts.on '-g', '--gfm', 'Use for non-README files (comments, etc)' do |g|
     options[:gfm] = g
   end

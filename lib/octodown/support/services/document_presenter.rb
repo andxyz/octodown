@@ -10,6 +10,7 @@ module Octodown
           when :pdf    then PDF
           when :html   then HTML
           when :server then Server
+          when :raw_for_markedapp then HTMLForMarkedapp
           end.new(GithubMarkdown.render(file, options), options).present
         end
       end
