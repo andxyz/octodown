@@ -18,7 +18,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'github-markup',    '~> 1.4', '>= 1.4.0'
-  spec.add_dependency 'github-linguist',  '~> 4.6', '>= 4.6.4'
   spec.add_dependency 'html-pipeline',    '~> 2.2', '>= 2.2.1'
   spec.add_dependency 'sanitize',         '~> 4.0', '>= 4.0.0'
   spec.add_dependency 'github-markdown',            '~> 0.6.8'

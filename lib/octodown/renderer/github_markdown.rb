@@ -33,7 +33,6 @@ module Octodown
       def pipeline
         Pipeline.new [
           Pipeline::MarkdownFilter,
-          Pipeline::SyntaxHighlightFilter,
           Support::RelativeRootFilter,
           Pipeline::SanitizationFilter,
           Pipeline::ImageMaxWidthFilter,

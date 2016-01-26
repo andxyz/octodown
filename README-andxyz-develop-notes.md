@@ -57,7 +57,7 @@ rbenv exec gem install octodown-1.2.100.gem
 hash -r && rbenv rehash
 ```
 
-the new crazy traveling ruby way
+the crossplatform crazy travelingruby way
 
 ```shell
 bundle install --with=development
