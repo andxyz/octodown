@@ -6,11 +6,11 @@ module Octodown
           include Octodown::Renderer
 
           case options[:presenter]
-          when :raw    then Raw
-          when :pdf    then PDF
-          when :html   then HTML
-          when :server then Server
-          when :raw_for_markedapp then HTMLForMarkedapp
+            when :raw    then Raw
+            when :pdf    then PDF
+            when :html   then HTML
+            when :server then Server
+            when :raw_for_markedapp then RawGithubHTMLForMarkedapp
           end.new(GithubMarkdown.render(file, options), options).present
         end
       end
