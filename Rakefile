@@ -24,7 +24,8 @@ Distribution.configure do |config|
     'charlock_holmes-0.7.3',
     'thin-1.6.4',
     'eventmachine-1.0.8',
-    'ffi-1.9.10'
+    'ffi-1.9.10',
+    'rinku-1.7.3'
   ]
 end
 

@@ -25,18 +25,57 @@ gem build octodown.gemspec
 octodown --style githubformarked --raw-for-markedapp ~/Desktop/zing-dreams.md
 hash -r
 octodown --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md
-
-cd ~/code/andxyz-octodown
-gem uninstall octodown
-gem build octodown.gemspec
-gem install ./octodown-1.2.99.gem
-hash -r
-octodown --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md | bcat
-
 ```
 
 
-Now I can use these as a custom processor
+try reinstalling and running it
+
+```shell
+cd ~/code/andxyz-octodown
+gem uninstall octodown
+gem clean octodown
+gem clean json
+bundle clean --force
+hash -r && rbenv rehash
+octodown --version
+```
+
+redo the `packaging/Gemfile.lock` file
+
+```
+cd ~/code/andxyz-octodown
+rm -rf Gemfile.lock
+bundle install --without=development
+cp Gemfile.lock packaging/Gemfile.lock
+```
+
+old fashioned way
+
+```shell
+rbenv exec gem build octodown.gemspec
+rbenv exec gem install octodown-1.2.100.gem
+hash -r && rbenv rehash
+```
+
+the new crazy traveling ruby way
+
+```shell
+bundle install --with=development
+bundle exec rake -T
+bundle exec rake install:local
+hash -r && rbenv rehash
+which -a octodown
+octodown --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md
+
+```
+
+the true test
+
+```shell
+octodown --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md | bcat
+```
+
+Now I can use the following settings for my custom marked2.app processor
 
 ![](http://cl.ly/3q3b1q1g192C/Image%202016-01-25%20at%206.17.38%20PM.png)
 

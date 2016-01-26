@@ -14,7 +14,7 @@ module Distribution
                    :packaging_dir, :native_extensions
 
     def initialize(arch)
-      abort 'Ruby 2.1.x required' if RUBY_VERSION !~ /^2\.1\./
+      abort 'Ruby 2.x.x required' if RUBY_VERSION !~ /^2/
 
       @arch = arch
       @config = ::Distribution.configuration

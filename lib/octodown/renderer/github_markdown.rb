@@ -33,12 +33,14 @@ module Octodown
       def pipeline
         Pipeline.new [
           Pipeline::MarkdownFilter,
+          Pipeline::SyntaxHighlightFilter,
           Support::RelativeRootFilter,
           Pipeline::SanitizationFilter,
           Pipeline::ImageMaxWidthFilter,
           Pipeline::MentionFilter,
           Pipeline::EmojiFilter,
-          Pipeline::RougeFilter
+          Pipeline::RougeFilter,
+          Pipeline::AutolinkFilter
         ], context.merge(gfm: options[:gfm])
       end
 
