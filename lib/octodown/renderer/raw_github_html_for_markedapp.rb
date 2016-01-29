@@ -12,7 +12,7 @@ module Octodown
       def initialize(rendered_markdown, options = {})
         @rendered_markdown = rendered_markdown
         @options = options
-        @filepath = File.join parent_dir, 'template', 'github_raw_html_for_marked_app.html.erb'
+        @filepath = File.join parent_dir, 'template', 'raw_github_html_for_markedapp.html.erb'
       end
 
       def content

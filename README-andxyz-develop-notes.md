@@ -24,9 +24,8 @@ rm -rf octodown-1.2.99.gem
 gem build octodown.gemspec
 octodown --style githubformarked --raw-for-markedapp ~/Desktop/zing-dreams.md
 hash -r
-octodown --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md
+octodown --gfm --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md
 ```
-
 
 try reinstalling and running it
 
@@ -65,14 +64,13 @@ bundle exec rake -T
 bundle exec rake install:local
 hash -r && rbenv rehash
 which -a octodown
-octodown --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md
-
+octodown --gfm --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md
 ```
 
 the true test
 
 ```shell
-octodown --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md | bcat
+octodown --gfm --style githubformarkedapp --raw-for-markedapp ~/Desktop/zing-dreams.md | bcat
 ```
 
 Now I can use the following settings for my custom marked2.app processor
@@ -81,6 +79,6 @@ Now I can use the following settings for my custom marked2.app processor
 
 `/Users/andxyz/.rbenv/shims/octodown`
 
-`--raw-for-markedapp --style githubformarkedapp`
+`--gfm --raw-for-markedapp --style githubformarkedapp`
 
-`--raw-for-markedapp --style atom`
+`--gfm --raw-for-markedapp --style atom`
