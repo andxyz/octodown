@@ -1,3 +1,3 @@
 module Octodown
-  VERSION = '1.2.100'
+  VERSION = '2.0.0'
 end
