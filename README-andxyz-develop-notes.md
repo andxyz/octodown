@@ -1,6 +1,21 @@
 
 ### Notes on working with octodown gem
 
+old fashioned way
+
+```shell
+cd /Users/andxyz/code/andxyz-octodown
+rbenv local 2.3.3
+ruby --version
+rm -rf octodown-2.0.0.gem
+rbenv exec gem build octodown.gemspec
+rbenv exec gem install octodown-2.0.0.gem
+hash -r && rbenv rehash
+rbenv exec octodown --style githubformarked --raw-for-markedapp ~/Desktop/zing-dreams.md
+```
+
+just some random notes
+
 ```shell
 gem install octodown
 which octodown
@@ -46,14 +61,6 @@ cd ~/code/andxyz-octodown
 rm -rf Gemfile.lock
 bundle install --without=development
 cp Gemfile.lock packaging/Gemfile.lock
-```
-
-old fashioned way
-
-```shell
-rbenv exec gem build octodown.gemspec
-rbenv exec gem install octodown-1.2.100.gem
-hash -r && rbenv rehash
 ```
 
 the crossplatform crazy travelingruby way
