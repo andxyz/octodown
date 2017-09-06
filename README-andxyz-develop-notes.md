@@ -5,7 +5,7 @@ old fashioned way
 
 ```shell
 cd /Users/andxyz/code/andxyz-octodown
-rbenv local 2.3.3
+rbenv local 2.4.1
 ruby --version
 rm -rf octodown-2.0.0.gem
 rbenv exec gem build octodown.gemspec
